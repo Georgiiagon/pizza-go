@@ -31,7 +31,7 @@ func main() {
 
 	router.ServeFiles("/public/*filepath", http.Dir("public"))
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }
 
 func frontend(w http.ResponseWriter, req *http.Request, _ httprouter.Params) {
